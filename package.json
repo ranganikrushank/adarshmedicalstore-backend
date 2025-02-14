@@ -7,8 +7,7 @@
     "build": "strapi build",
     "deploy": "strapi deploy",
     "develop": "strapi develop",
-    "start": "strapi start",
-    "strapi": "strapi",
+    "start": "NODE_ENV=production strapi start",
     "postinstall": "npm install --platform=linux --arch=x64 sharp"
   },
   "dependencies": {
@@ -19,7 +18,7 @@
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",
-    "sharp": "^0.33.5",
+
     "styled-components": "^6.0.0"
   },
   "devDependencies": {
