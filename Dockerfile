@@ -1,7 +1,7 @@
-# Use an official Node.js image
+# Use official Node.js image
 FROM node:18-alpine
 
-# Set the working directory inside the container
+# Set working directory
 WORKDIR /app
 
 # Copy package.json and package-lock.json first (for efficient caching)
@@ -13,11 +13,11 @@ RUN npm install
 # Copy the entire Strapi project
 COPY . .
 
-# Expose Strapi port (needed for Render)
-EXPOSE 1337
-
-# Give permission to Strapi files
+# Fix permissions to ensure the `strapi` command runs
 RUN chmod -R 777 /app/node_modules .cache && chmod +x /app/node_modules/.bin/strapi
 
-# Start Strapi in production mode
+# Expose Strapi port
+EXPOSE 1337
+
+# Start Strapi
 CMD ["npm", "run", "start"]
