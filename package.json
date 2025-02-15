@@ -9,6 +9,7 @@
     "start": "node node_modules/@strapi/strapi/bin/strapi.js start"
   },
   "dependencies": {
+    "18": "^0.0.0",
     "@strapi/plugin-cloud": "5.10.2",
     "@strapi/plugin-users-permissions": "5.10.2",
     "@strapi/strapi": "5.10.2",
@@ -24,6 +25,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "rollup": "^4.34.7",
     "typescript": "^5"
   },
   "engines": {
