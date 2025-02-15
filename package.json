@@ -4,10 +4,9 @@
   "private": true,
   "description": "A Strapi application",
   "scripts": {
-    "develop": "strapi develop",
-    "build": "strapi build",
-    "start": "strapi start",
-    "postinstall": "strapi build"
+    "develop": "node node_modules/@strapi/strapi/bin/strapi.js develop",
+    "build": "node node_modules/@strapi/strapi/bin/strapi.js build",
+    "start": "node node_modules/@strapi/strapi/bin/strapi.js start"
   },
   "dependencies": {
     "@strapi/plugin-cloud": "5.10.2",
