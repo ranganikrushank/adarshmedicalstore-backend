@@ -4,21 +4,20 @@
   "private": true,
   "description": "A Strapi application",
   "scripts": {
-    "build": "strapi build",
-    "deploy": "strapi deploy",
     "develop": "strapi develop",
-    "start": "NODE_ENV=production strapi start",
-    "postinstall": "npm install --platform=linux --arch=x64 sharp"
+    "build": "strapi build",
+    "start": "strapi start",
+    "postinstall": "strapi build"
   },
   "dependencies": {
     "@strapi/plugin-cloud": "5.10.2",
     "@strapi/plugin-users-permissions": "5.10.2",
     "@strapi/strapi": "5.10.2",
+    "@strapi/typescript-utils": "^5.10.2",
     "better-sqlite3": "11.3.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",
-
     "styled-components": "^6.0.0"
   },
   "devDependencies": {
